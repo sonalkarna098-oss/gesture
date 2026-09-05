@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finger Frame AI - Ultimate Studio</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- MediaPipe Hand Tracking Engine -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="navbar">
+            <h1>🖐️ Finger Frame <span>AI Studio</span></h1>
+            <div class="active-badge" id="mode-indicator">Mode: 🎨 Cartoon</div>
+        </header>
+
+        <!-- Neomorphic Multi-Mode Grid -->
+        <div class="mode-grid">
+            <button id="btn-1" class="active" onclick="setMode(1)">🎨 Cartoon</button>
+            <button id="btn-2" onclick="setMode(2)">⚡ Cyberpunk</button>
+            <button id="btn-3" onclick="setMode(3)">🔥 Thermal</button>
+            <button id="btn-4" onclick="setMode(4)">❄️ Tinted Glass</button>
+            <button id="btn-5" onclick="setMode(5)">🌆 Vaporwave</button>
+            <button id="btn-6" onclick="setMode(6)">💻 Matrix</button>
+            <button id="btn-7" onclick="setMode(7)">✏️ Sketch</button>
+            <button id="btn-8" onclick="setMode(8)">👁️ Night Vision</button>
+            <button id="btn-9" onclick="setMode(9)">🎬 Anime Layer</button>
+        </div>
+
+        <!-- Viewport Display -->
+        <div class="viewport">
+            <video id="webcam" autoplay playsinline></video>
+            <canvas id="output_canvas"></canvas>
+            <div id="loader" class="status-overlay">Initializing AI Vision Models...</div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
