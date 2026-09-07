@@ -1,0 +1,10 @@
+[project]
+name = "gesture"
+version = "1.0.0"
+description = "Flask gesture recognition application"
+requires-python = ">=3.12,<3.15"
+dependencies = [
+    "Flask==3.1.2",
+    "Pillow",
+    "gunicorn"
+]
